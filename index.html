@@ -5,11 +5,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taurus Treinamentos, Assessoria & Consultoria</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Efeito de tecnologia com padrão */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(0, 150, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 150, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        header {
+            background: rgba(20, 20, 40, 0.95);
+            border-bottom: 3px solid #0096ff;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 150, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            color: #00d4ff;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            color: #00ff88;
+            border-bottom-color: #00ff88;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+        }
+
+        section {
+            margin: 3rem auto;
+            padding: 2rem;
+            max-width: 1000px;
+            background: rgba(30, 30, 50, 0.8);
+            border-radius: 10px;
+            border-left: 4px solid #0096ff;
+            box-shadow: 0 8px 32px rgba(0, 150, 255, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        section h2 {
+            color: #00d4ff;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+            border-bottom: 2px solid #0096ff;
+            padding-bottom: 0.5rem;
+        }
+
+        article img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #0096ff;
+            box-shadow: 0 0 20px rgba(0, 150, 255, 0.4);
+            margin: 1rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        article img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+        }
+
+        article {
+            margin: 1.5rem 0;
+        }
+
+        article h3 {
+            color: #00ff88;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+            text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+        }
+
+        article p {
+            margin: 1rem 0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        aside {
+            background: rgba(0, 150, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #00ff88;
+            margin: 2rem 0;
+        }
+
+        aside h3 {
+            color: #00ff88;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+        }
+
+        aside ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        aside ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #b0e0ff;
+        }
+
+        aside ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #0096ff;
+            font-weight: bold;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 1.5rem;
+                margin: 1.5rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Taurus Treinamentos, Assessoria & Consultoria</h1>
+        <center>
+            <h1>Taurus Treinamentos, Assessoria & Consultoria</h1>
+        </center>
         <nav> <!--Seção de navegção do site.-->
             <ul> <!--Lista não ordenada para links do nosso menu.-->
                 <li><a href="#Sobre">Sobre mim</a></li>
@@ -68,11 +249,12 @@
                 (UNIASSELVI).
                 <br>
                 * Pós-Graduações: Possui três especializações focadas em gestão técnica, sendo um MBA em Finanças e
-                Política Fiscal, além de especializações em Ciência de Dados e em Administração Financeira. [3] 
+                Política Fiscal, além de especializações em Ciência de Dados e em Administração Financeira. [3]
                 <br><br>
             </p>
 
         </article>
+        <!--Aprendizagem na Aula 3 para criar uma nova tag que é o aside "nova parte"-->
 
         <aside>
 
@@ -87,6 +269,7 @@
             </ul>
 
         </aside>
+
     </section>
     <section id="Projetos">
 
@@ -100,21 +283,137 @@
         </article>
 
     </section>
+
+    <section id="Serviços">
+
+        <h2>Serviços</h2>
+        <article>
+            <h3>Treinamentos</h3>
+
+            <p>
+                Ofereço treinamentos personalizados para equipes e indivíduos, focados em aprimorar habilidades técnicas
+                e de gestão. Meus treinamentos são adaptados às necessidades específicas de cada cliente, garantindo
+                que os participantes adquiram conhecimentos práticos e aplicáveis ao seu contexto profissional.
+            </p>
+        </article>
+        <article>
+            <h3>Assessoria de Sistemas</h3>
+
+            <p>
+                Forneço assessoria especializada para a implementação e otimização de sistemas de gestão pública. Meu
+                serviço inclui análise de necessidades, recomendação de soluções tecnológicas, suporte na integração
+                de sistemas e treinamento para garantir que as equipes possam utilizar as ferramentas de forma eficaz.
+            </p>
+
+
+        </article>
+
+    </section>
+
+    <section id="habilidades"><!--Aprendizagem da Aula 5 para inserir tabelas-->
+        <h2>Habilidades</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Habilidade</th>
+                    <th>Nível de Proficiência</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <style>
+                    table, th, td {
+                        border: 1px solid #0096ff;
+                        padding: 10px;
+                        text-align: left;
+                    }
+                </style>
+                <tr>
+                    <td>Mapenamento de ações</td>
+                    <td>Avançado</td>
+                    <td>Tenho experiência em mapear ações estratégicas para alcançar objetivos específicos ao desenvolvimento
+                        de fluxos, realizando verificações e utilizando metodologias de planejamento e análise para garantir a eficácia das iniciativas.</td>
+                </tr>
+                <tr>
+                    <td>Desenvolvimento de Fluxos</td>
+                    <td>Intermediário</td>
+                    <td>Sou habilidoso no desenvolvimento de fluxos de trabalho eficientes, otimizando processos e
+                        garantindo a integração harmoniosa entre diferentes etapas e equipes para melhorar a
+                        produtividade e a qualidade dos resultados.</td>
+                </tr>
+                <tr>
+                    <td>Treinamentos</td>
+                    <td>Avançado</td>
+                    <td>Ofereço treinamentos personalizados para equipes e indivíduos, focados em aprimorar habilidades
+                        técnicas e de gestão em diversas áreas, como Processo Digital  (workflow), Recursos Humanos, Compras e Licitações, 
+                        Almoxarifado, Patrimônio, Frotas e Financeiro/Contabilidade.</td>
+                </tr>
+                <tr>
+                    <td>Assessoria de Sistemas</td>
+                    <td>Avançado</td>
+                    <td>Forneço assessoria especializada para a implementação e otimização de sistemas de gestão
+                        pública.</td>
+                </tr>
+                <tr>
+                    <td>Financas Públicas</td>
+                    <td>Avançado</td>
+                    <td>Possuo conhecimento em finanças públicas, incluindo planejamento e gestão financeira para órgãos
+                        públicos.</td>
+                </tr>
+                <tr>
+                    <td>Processo Digital</td>
+                    <td>Avançado</td>
+                    <td> Tenho experiência em implementar processos digitais para otimizar operações e melhorar a
+                        eficiência dos serviços públicos.</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </section>
+
     <section>
 
         <footer>
             <p>Direitos autorais reservados ao Gilson.</p>
-
-            <section id="Contato">
-                <h2>Contato</h2>
-                <p>Você possui algum Projeto em mente que precisa desenvolver? Entre em contato.</p>
-
-                <address>
-                    E-mail: <a href="mailto:juariw@gmail.com">juariw@gmail.com</a><br>
-                    Telefone: <a href="tel?+5547991220967">(47)99122-0967</a>
-                </address>
-            </section>
         </footer>
+    </section>
+
+    <section id="Contato">
+        <h2>Contato</h2>
+        <p>Você possui algum Projeto em mente que precisa desenvolver? Entre em contato.</p>
+        <!--Aprendizagem na aula 4 da Introdução à Programação Front-End e Back-End-->
+        <form action=""> <!--Acessar o site do w3schools.com para obter mais informações sobre os tipos e atributos-->
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome"><br>
+
+            <label for="email">E-mail: </label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="telefone">Telefone: </label>
+            <input type="tel" id="telefone" name="telefone"><br>
+
+            <label for="assunto">Assunto: </label>
+            <select name="assunto" id="assunto">
+                <option value="orcamento">Orçamento</option>
+                <option value="proposta">Proposta</option>
+                <option value="duvida">Dúvida</option>
+                <option value="outro">Outro</option>
+            </select><br>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea><br>
+
+            <input type="checkbox" name="inscricao" id="inscricao">
+            <label for="inscricao">Deseja receber minha tabela se valores?</label><br>
+
+            <input type="submit" value="Enviar mensagem">
+
+
+        </form>
+        </address>
+    </section>
+    </footer>
     </section>
 </body>
 
